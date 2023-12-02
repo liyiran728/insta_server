@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Insta485</title>
+</head>
+
+<body>
+    <div class="top-tag">
+        <a href="/"><img src="{{url_for('static', filename='images/home.png')}}" class="home-logo" alt="text"
+                height="60"></a>
+        <span class="insta">insta485</span>
+    </div>
+
+    <form action="/accounts/?target=/" method="post" enctype="multipart/form-data">
+        <p>Photo</p>
+        <input type="file" name="file" required />
+        <p>Fullname</p>
+        <input type="text" name="fullname" required />
+        <p>Username</p>
+        <input type="text" name="username" required />
+        <p>Email</p>
+        <input type="text" name="email" required />
+        <p>Password</p>
+        <input type="password" name="password" required />
+        <input type="submit" name="signup" value="sign up" />
+        <input type="hidden" name="operation" value="create" />
+    </form>
+    <div> Have an account? <a href="/accounts/login/"> <b>Log in</b></div>
+</body>
+
+</html>

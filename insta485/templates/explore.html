@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 485 P1 YC Qiu -->
+
+<head>
+    <title>insta485</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/css/style.css')}}">
+</head>
+
+<body>
+    <div class="top-tag">
+        <a href="/"><img src="{{url_for('static', filename='/images/home.png')}}" class="home-logo" alt="text"
+                width="237" height="178"></a>
+        <span class="insta">insta485</span>
+        <span class="explore"><a href="/explore/">explore</a>|<a href="/users/{{logname}}/">{{logname}}</a></span>
+    </div>
+
+    <div class="detail-page">
+        <p class="profile">Discover People</p>
+
+        {% for f in not_following %}
+        <img src="{{url_for('uploads', filename=f.user_img_url)}}" class="profile" alt="text" height="80">
+        <a href="/users/{{f.username}}/">{{f.username}}</a>
+        <form action="/following/?target=/explore/" method="post" enctype="multipart/form-data">
+            <input type="submit" name="follow" value="follow" />
+            <input type="hidden" name="username" value="{{f.username}}" />
+            <input type="hidden" name="operation" value="follow" />
+        </form>
+        {% endfor %}
+
+    </div>
+
+
+</body>
+
+
+</html>

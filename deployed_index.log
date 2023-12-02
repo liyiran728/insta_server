@@ -1,0 +1,22 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 3.87.162.235:80...
+* TCP_NODELAY set
+* Connected to ec2-3-87-162-235.compute-1.amazonaws.com (3.87.162.235) port 80 (#0)
+> GET / HTTP/1.1
+> Host: ec2-3-87-162-235.compute-1.amazonaws.com
+> User-Agent: curl/7.68.0
+> Accept: */*
+> Cookie: username=awdeorio
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: nginx/1.18.0 (Ubuntu)
+< Date: Mon, 21 Feb 2022 04:28:35 GMT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 5784
+< Connection: keep-alive
+< 
+{ [5784 bytes data]
+100  5784  100  5784    0     0  43488      0 --:--:-- --:--:-- --:--:-- 43488
+* Connection #0 to host ec2-3-87-162-235.compute-1.amazonaws.com left intact

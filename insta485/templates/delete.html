@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 485 P2 YC Qiu & Yiran Li -->
+
+<head>
+    <title>insta485</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/css/style.css')}}">
+</head>
+
+<body>
+    <div class="top-tag">
+        <a href="/"><img src="{{url_for('static', filename='images/home.png')}}" class="home-logo" alt="text"
+                height="60"></a>
+        <span class="insta">insta485</span>
+        <span class="explore"><a href="/explore/">explore</a>|<a href="/users/{{logname}}/">{{logname}}</a></span>
+    </div>
+
+    <div>{{logname}}</div>
+    <form action="/accounts/?target=/accounts/create/" method="post" enctype="multipart/form-data">
+        <input type="submit" name="delete" value="confirm delete account" />
+        <input type="hidden" name="operation" value="delete" />
+    </form>
+</body>
+
+</html>
